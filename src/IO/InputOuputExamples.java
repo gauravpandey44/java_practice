@@ -7,22 +7,32 @@ public class InputOuputExamples {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		try {
-			File f=new File("abc.txt");
-			System.out.println(f.exists());
+	
 			
-				f.createNewFile();
-				String sep=File.separator;
-			File f2=new File(sep+"Users/gp1384.ATTAPA.DOM/Documents/Eclipse/java_practice/abc2.txt");
-			//f2.createNewFile();
+			File f1=new File("/home/gaurav");
+			File f2=new File("/home/gaurav/abc.txt");
+			File tmp;
+			for(String c : f1.list()) {
 			
-			System.out.println(f2.exists());
-			System.out.println(File.separator);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				tmp=new File(f1,c);
+				if(tmp.isDirectory()) {
+					
+					System.out.println(c+" is a Directory");
+					
+				}
+				else {
+					
+					System.out.println(c+" is a File");
+				}
+				
+				
 				
 			}
+			
+			System.out.println(f2.length());
+			
+			
+		
 			
 			
 		
