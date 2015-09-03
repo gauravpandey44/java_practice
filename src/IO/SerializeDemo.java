@@ -4,8 +4,8 @@ import java.io.*;
 class Dog implements Serializable {
 	
 	
-	int i=10,j=20;
-    static int c=300;
+	int i=100,j=200;
+    static int c=3000;
    
    
     
@@ -19,7 +19,7 @@ public class SerializeDemo {
 		
 		Dog d1=new Dog();
 		System.out.println("Before Serialization");
-		System.out.println("i= "+d1.i+"\nj= "+d1.j+"\nj= "+d1.c);
+		System.out.println("i= "+d1.i+"\nj= "+d1.j+"\nc= "+d1.c);
 		
 		//ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("ObjectfileDog.txt"));
 		
@@ -31,7 +31,7 @@ public class SerializeDemo {
 		
 		
 		System.out.println("After Deserialization");
-		System.out.println("i= "+d2.i+"\nj= "+d2.j+"\nj= "+d2.c);
+		System.out.println("i= "+d2.i+"\nj= "+d2.j+"\nc= "+d2.c);
 		ois.close();
 		
 
