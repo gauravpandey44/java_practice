@@ -13,7 +13,7 @@ public class Date_Time {
 		System.out.println(dt.getDate());
 		
 		Calendar c=Calendar.getInstance();
-		System.out.println(c.);
+		System.out.println(c.toString());
 	}
 
 }
